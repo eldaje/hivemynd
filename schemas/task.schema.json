@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Canonical BLUE KITE task",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "record_id": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9_-]{1,100}$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 160
+    },
+    "description": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 500
+    },
+    "status": {
+      "enum": [
+        "proposed",
+        "active",
+        "blocked",
+        "done"
+      ]
+    },
+    "owner": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 500
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 9007199254740991
+    },
+    "created_at_utc": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updated_at_utc": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updated_by": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9_-]{1,100}$"
+    },
+    "completion_claimed": {
+      "type": "boolean"
+    },
+    "completion_evidence": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 240
+    },
+    "completion_claimed_by": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 100
+    },
+    "done_verified_by": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 100
+    },
+    "done_verified_at_utc": {
+      "anyOf": [
+        {
+          "const": ""
+        },
+        {
+          "type": "string",
+          "format": "date-time"
+        }
+      ]
+    }
+  },
+  "required": [
+    "record_id",
+    "title",
+    "description",
+    "status",
+    "owner",
+    "version",
+    "created_at_utc",
+    "updated_at_utc",
+    "updated_by",
+    "completion_claimed",
+    "completion_evidence",
+    "completion_claimed_by",
+    "done_verified_by",
+    "done_verified_at_utc"
+  ]
+}

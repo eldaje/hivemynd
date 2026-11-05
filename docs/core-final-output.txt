@@ -1,0 +1,31 @@
+✔ A/B/E/I: create, update, field audit, authenticated attribution and bounded read (5.974106ms)
+✔ C: two independently prepared updates from same version accept only one (3.155502ms)
+✔ D: retries return original result with no repeated audit; changed payload/actor rejected (2.318222ms)
+✔ F: claim is unverified; separate authorized actor checks real synthetic fixture; edits invalidate proof (5.854198ms)
+✔ F: evidence cannot certify a different task title and verification cannot precede claim (2.630866ms)
+✔ H: wrong credentials, forbidden writes, protected fields and forged timestamps never mutate (1.234187ms)
+✔ H: credential rotation revokes old token without changing actor attribution (0.962676ms)
+✔ L: proposer submits reviewable create/update, writer review applies once; stale proposal stays pending (6.402129ms)
+✔ G: interruption before commit leaves no state; after commit lost reply recovers via original receipt (0.752975ms)
+✔ G/K: partial write or direct edit invalidates integrity and blocks reads/writes without overwriting evidence (1.341266ms)
+✔ G/I: read-back failure is not success; replay finds committed operation (0.729931ms)
+✔ durable store restart preserves idempotency, server timestamps and audit; lock fails closed (8.966437ms)
+✔ timestamps come from trusted runtime; client metadata cannot replace identity (0.498298ms)
+✔ corrupt local JSON is surfaced without replacing forensic state (4.525472ms)
+✔ bounded retention fails closed at operation capacity rather than expiring receipts (2.213398ms)
+✔ brief distinguishes claims from synthetic verification and includes blockers (1.985429ms)
+✔ Sheets API fake: actual GAS entrypoint creates/updates/reads typed tabs with literal strings (16.587331ms)
+✔ Sheets fake: rejected atomic batch does not apply task/audit/receipt, same logical retry succeeds (4.447726ms)
+✔ Sheets fake: commit with lost reply recovers from durable operation, without a second batch (4.257023ms)
+✔ Sheets fake: hypothetical partial write and direct edits fail integrity, preserve evidence for operator (5.595656ms)
+✔ Sheets fake: formulas, header edits, and audit edits are detected (12.023784ms)
+✔ GAS rejects query credentials, malformed/oversized input, wrong credentials; GET gives no data (1.776881ms)
+✔ Sheets fake: proposal review and independent synthetic verification run through GAS (19.509939ms)
+ℹ tests 23
+ℹ suites 0
+ℹ pass 23
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 137.851101
