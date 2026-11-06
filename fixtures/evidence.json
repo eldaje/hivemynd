@@ -1,0 +1,8 @@
+[
+  {
+    "reference": "synthetic:blue-kite-inspection-v1",
+    "expected_title": "Inspect fictional blue kite",
+    "verdict": "pass",
+    "description": "Synthetic inspection certificate. No real inspection occurred."
+  }
+]

@@ -1,0 +1,20 @@
+
+> hivemind-blue-kite@0.1.0 demo
+> node scripts/demo.js
+
+CREATE: {"ok":true,"code":"ACCEPTED","operation_id":"6cc933c2-80e7-4850-b1a2-5d327587dbe5","record_id":"7f288d77-0e27-4e64-95ad-c5e2ca74d92c","version":1,"accepted_at_utc":"2026-11-05T19:28:55.970Z","reference":{"action":"get_task","target_record_id":"7f288d77-0e27-4e64-95ad-c5e2ca74d92c"}}
+UPDATE: {"ok":true,"code":"ACCEPTED","operation_id":"e45c7f90-5136-4d14-8474-641addf119b3","record_id":"7f288d77-0e27-4e64-95ad-c5e2ca74d92c","version":2,"accepted_at_utc":"2026-11-05T19:28:55.998Z","reference":{"action":"get_task","target_record_id":"7f288d77-0e27-4e64-95ad-c5e2ca74d92c"}}
+STALE: {"ok":false,"code":"VERSION_CONFLICT","operation_id":"2157e490-9f3a-43dd-b7e2-fa07b35727d8","record_id":"7f288d77-0e27-4e64-95ad-c5e2ca74d92c","accepted_at_utc":"2026-11-05T19:28:56.008Z","current_version":2}
+REPLAY_ORIGINAL: {"ok":true,"code":"ACCEPTED","operation_id":"6cc933c2-80e7-4850-b1a2-5d327587dbe5","record_id":"7f288d77-0e27-4e64-95ad-c5e2ca74d92c","version":1,"accepted_at_utc":"2026-11-05T19:28:55.970Z","reference":{"action":"get_task","target_record_id":"7f288d77-0e27-4e64-95ad-c5e2ca74d92c"}}
+PROPOSAL: {"ok":true,"code":"ACCEPTED","operation_id":"3b7fe832-cf5d-4b07-bbef-b31e1387d760","record_id":"55eee5a7-7874-4119-8afe-bbf7b2b3e1e2","version":null,"accepted_at_utc":"2026-11-05T19:28:56.027Z","reference":{"action":"get_proposal","proposal_id":"55eee5a7-7874-4119-8afe-bbf7b2b3e1e2"},"proposal_id":"55eee5a7-7874-4119-8afe-bbf7b2b3e1e2"}
+REVIEW: {"ok":true,"code":"ACCEPTED","operation_id":"30bf78ac-a91e-4412-b493-252019ba9759","record_id":"7f288d77-0e27-4e64-95ad-c5e2ca74d92c","version":3,"accepted_at_utc":"2026-11-05T19:28:56.035Z","reference":{"action":"get_task","target_record_id":"7f288d77-0e27-4e64-95ad-c5e2ca74d92c"},"proposal_id":"55eee5a7-7874-4119-8afe-bbf7b2b3e1e2"}
+CLAIMED: {"ok":true,"code":"READ","task":{"record_id":"7f288d77-0e27-4e64-95ad-c5e2ca74d92c","title":"Inspect fictional blue kite","description":"Imaginary fabric and string inspection for a fictional Tuesday review.","status":"done","owner":"Fictional Tuesday reviewer","version":4,"created_at_utc":"2026-11-05T19:28:55.970Z","updated_at_utc":"2026-11-05T19:28:56.056Z","updated_by":"writer","completion_claimed":true,"completion_evidence":"synthetic:blue-kite-inspection-v1","completion_claimed_by":"writer","done_verified_by":"","done_verified_at_utc":"","completion_state":"claimed_unverified"}}
+VERIFY_SYNTHETIC: {"ok":true,"code":"ACCEPTED","operation_id":"503b4180-dad1-47cc-bbc2-89ee7bc0ab40","record_id":"7f288d77-0e27-4e64-95ad-c5e2ca74d92c","version":5,"accepted_at_utc":"2026-11-05T19:28:56.066Z","reference":{"action":"get_task","target_record_id":"7f288d77-0e27-4e64-95ad-c5e2ca74d92c"}}
+READ_AFTER_WRITE: {"ok":true,"code":"READ","task":{"record_id":"7f288d77-0e27-4e64-95ad-c5e2ca74d92c","title":"Inspect fictional blue kite","description":"Imaginary fabric and string inspection for a fictional Tuesday review.","status":"done","owner":"Fictional Tuesday reviewer","version":5,"created_at_utc":"2026-11-05T19:28:55.970Z","updated_at_utc":"2026-11-05T19:28:56.066Z","updated_by":"verifier","completion_claimed":true,"completion_evidence":"synthetic:blue-kite-inspection-v1","completion_claimed_by":"writer","done_verified_by":"verifier","done_verified_at_utc":"2026-11-05T19:28:56.066Z","completion_state":"verified_synthetic"}}
+AUDIT: 40 accepted field events
+PASS: local HTTP + durable file store only; no live Google or cross-model test.
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2
+npm notice To update run: npm install -g npm@12.2.2
+npm notice

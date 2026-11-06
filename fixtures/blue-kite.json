@@ -1,0 +1,11 @@
+{
+  "action": "create_task",
+  "operation_id": "blue-kite-create-demo-v1",
+  "changes": {
+    "title": "Inspect fictional blue kite",
+    "description": "Imaginary fabric and string inspection for a fictional Tuesday review.",
+    "owner": "Fictional Kite Keeper"
+  },
+  "reason": "Start the fictional BLUE KITE pilot",
+  "model_claimed": "demo-client"
+}

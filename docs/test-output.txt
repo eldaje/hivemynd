@@ -1,0 +1,46 @@
+
+> hivemind-blue-kite@0.1.0 pretest
+> node scripts/build-gas.js
+
+Built dist/apps-script (not uploaded or deployed).
+
+> hivemind-blue-kite@0.1.0 test
+> node --test --test-isolation=none
+
+✔ HTTP gateway: real loopback create/read, competing writes, auth, invalid JSON and body bounds (88.828377ms)
+✔ A/B/E/I: create, update, field audit, authenticated attribution and bounded read (2.882378ms)
+✔ C: two independently prepared updates from same version accept only one (4.32262ms)
+✔ D: retries return original result with no repeated audit; changed payload/actor rejected (4.181993ms)
+✔ F: claim is unverified; separate authorized actor checks real synthetic fixture; edits invalidate proof (9.000186ms)
+✔ F: evidence cannot certify a different task title and verification cannot precede claim (3.331853ms)
+✔ H: wrong credentials, forbidden writes, protected fields and forged timestamps never mutate (1.772625ms)
+✔ H: credential rotation revokes old token without changing actor attribution (2.006962ms)
+✔ L: proposer submits reviewable create/update, writer review applies once; stale proposal stays pending (8.14488ms)
+✔ G: interruption before commit leaves no state; after commit lost reply recovers via original receipt (1.342027ms)
+✔ G/K: partial write or direct edit invalidates integrity and blocks reads/writes without overwriting evidence (1.230672ms)
+✔ G/I: read-back failure is not success; replay finds committed operation (0.94564ms)
+✔ durable store restart preserves idempotency, server timestamps and audit; lock fails closed (6.102997ms)
+✔ timestamps come from trusted runtime; client metadata cannot replace identity (0.523805ms)
+✔ corrupt local JSON is surfaced without replacing forensic state (1.885111ms)
+✔ bounded retention fails closed at operation capacity rather than expiring receipts (2.05971ms)
+✔ brief distinguishes claims from synthetic verification and includes blockers (1.847256ms)
+✔ Sheets API fake: actual GAS entrypoint creates/updates/reads typed tabs with literal strings (17.708981ms)
+✔ Sheets fake: rejected atomic batch does not apply task/audit/receipt, same logical retry succeeds (5.573512ms)
+✔ Sheets fake: commit with lost reply recovers from durable operation, without a second batch (4.567944ms)
+✔ Sheets fake: hypothetical partial write and direct edits fail integrity, preserve evidence for operator (7.534126ms)
+✔ Sheets fake: formulas, header edits, and audit edits are detected (12.609551ms)
+✔ GAS rejects query credentials, malformed/oversized input, wrong credentials; GET gives no data (1.85051ms)
+✔ Sheets fake: proposal review and independent synthetic verification run through GAS (21.26753ms)
+ℹ tests 24
+ℹ suites 0
+ℹ pass 24
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 258.36197
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2
+npm notice To update run: npm install -g npm@12.2.2
+npm notice
