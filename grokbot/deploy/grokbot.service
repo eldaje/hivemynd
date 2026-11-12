@@ -1,0 +1,25 @@
+[Unit]
+Description=grokbot
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=grokbot
+Group=grokbot
+WorkingDirectory=/opt/grokbot
+EnvironmentFile=/opt/grokbot/.env
+Environment=GROKBOT_DB=/var/lib/grokbot/usage.db
+StateDirectory=grokbot
+StateDirectoryMode=0750
+ExecStart=/opt/grokbot/venv/bin/python src/bot.py
+Restart=always
+RestartSec=10
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=strict
+ProtectHome=yes
+ReadWritePaths=/var/lib/grokbot
+
+[Install]
+WantedBy=multi-user.target
